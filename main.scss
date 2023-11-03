@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//// VARIABLES
+// Primary
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+// Neutral
+$very-dark-blue-bg: hsl(217, 54%, 11%);
+$very-dark-blue-card-bg: hsl(216, 50%, 16%);
+$very-dark-blue-line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $very-dark-blue-bg;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 16px;
+  right: 0;
+  left: 0;
+  color: $white;
+  a,
+  a:visited {
+    color: $cyan;
+  }
+}
+
+.container {
+  background-color: $very-dark-blue-card-bg;
+  width: 338px;
+  padding: 20px;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .left {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    .top {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $very-dark-blue-line;
+
+      .nft-title {
+        color: $white;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .nft-description {
+        color: $soft-blue;
+        font-size: 18px;
+        font-weight: 300;
+      }
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nft-price {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          color: $cyan;
+          font-size: 18px;
+          font-weight: 600;
+          color: $cyan;
+        }
+        .nft-time-left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          color: $soft-blue;
+          font-size: 18px;
+          font-weight: 600;
+          color: $soft-blue;
+        }
+      }
+    }
+    .btm {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+      p {
+        color: $soft-blue;
+        font-size: 18px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 1px solid $soft-blue;
+          padding: 2px;
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+        span {
+          color: $white;
+          font-weight: 400;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .attribution {
+    display: none;
+  }
+}
